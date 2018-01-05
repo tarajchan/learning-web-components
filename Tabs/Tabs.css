@@ -15,6 +15,7 @@
 p {
 	font-family: "Butler Light";
 	font-size: 1rem;
+	font-weight: 600;
 	margin: 0.5rem 0;
 }
 
@@ -22,7 +23,10 @@ h2 {
 	padding: 0.95rem 0;
 	margin-bottom: 0;
 	font-family: "Butler Bold";
-	border-top: 0.25rem dotted green;
+	border-top: 0.25rem dotted #74b9d0;
+	color: #185569;
+  letter-spacing: 0.075rem;
+  text-shadow: 0.25rem 0.15rem 0.35rem #74b9d0;
 }
 
 div.tabComponent {
@@ -39,37 +43,63 @@ div.tabComponent label {
 	display: block;
 	float: left;
 	padding: 0.5rem 0.75rem;
+  border-bottom: 0.15rem groove #0186b3;
+	background: #74b9d0;
+	transition: transform 0.25s ease-in-out;
+}
+
+div.tabComponent label.last {
+	border-bottom-right-radius: 0.25rem;
+}
+
+div.tabComponent label.first {
+	border-top-left-radius: 0.25rem;
 }
 
 div.tabComponent label:hover {
 	cursor: pointer;
+	opacity: 0.85;
 }
 
 div.tabComponent input[type="radio"] {
 	display: none;
 }
 
+div.tabContent {
+	background-color: #dbf6ff;
+}
+
 .tabContent > #tab1Content,
 .tabContent > #tab2Content,
-.tabContent > #tab3Content {
+.tabContent > #tab3Content,
+.tabContent > #clearanceContent {
 	display: none;
-	border: 0.05rem solid green;
+	border: 0.15rem groove #0186b3;
 	max-width: 35rem;
 	opacity: 0;
 }
 
 #tab1:checked ~ .tabContent > #tab1Content,
 #tab2:checked ~ .tabContent > #tab2Content,
-#tab3:checked ~ .tabContent > #tab3Content {
+#tab3:checked ~ .tabContent > #tab3Content,
+#clearance:checked ~ .tabContent > #clearanceContent {
 	opacity: 1;
 	display: block;
 	padding: 3rem 2.5rem;
+	border-radius: 0.25rem;
 }
 
 #tab1:checked + label,
 #tab2:checked + label,
-#tab3:checked + label {
-	background-color: green;
-	border: 0.05rem solid black;
+#tab3:checked + label,
+#clearance:checked + label {
+  background-color: #0186b3;
+  color: white;
 }
 
+#tab1:checked + label:hover,
+#tab2:checked + label:hover,
+#tab3:checked + label:hover,
+#clearance:checked + label:hover {
+  transform: scale(1.25);
+}
