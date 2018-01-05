@@ -1,0 +1,75 @@
+* {
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: "Butler Light";
+	src: url("../../../../projects/Fonts/Butler_and_ButlerStencil/Butler/Butler_Light.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Butler Bold";
+	src: url("../../../../projects/Fonts/Butler_and_ButlerStencil/Butler/Butler_Bold.otf") format("opentype");
+}
+
+p {
+	font-family: "Butler Light";
+	font-size: 1rem;
+	margin: 0.5rem 0;
+}
+
+h2 {
+	padding: 0.95rem 0;
+	margin-bottom: 0;
+	font-family: "Butler Bold";
+	border-top: 0.25rem dotted green;
+}
+
+div.tabComponent {
+	max-width: 35rem;
+	transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  box-shadow: 0.05rem 0.25rem 0.5rem #cecece;
+}
+
+div.tabComponent label {
+	font-family: "Butler Light";
+	display: block;
+	float: left;
+	padding: 0.5rem 0.75rem;
+}
+
+div.tabComponent label:hover {
+	cursor: pointer;
+}
+
+div.tabComponent input[type="radio"] {
+	display: none;
+}
+
+.tabContent > #tab1Content,
+.tabContent > #tab2Content,
+.tabContent > #tab3Content {
+	display: none;
+	border: 0.05rem solid green;
+	max-width: 35rem;
+	opacity: 0;
+}
+
+#tab1:checked ~ .tabContent > #tab1Content,
+#tab2:checked ~ .tabContent > #tab2Content,
+#tab3:checked ~ .tabContent > #tab3Content {
+	opacity: 1;
+	display: block;
+	padding: 3rem 2.5rem;
+}
+
+#tab1:checked + label,
+#tab2:checked + label,
+#tab3:checked + label {
+	background-color: green;
+	border: 0.05rem solid black;
+}
+
