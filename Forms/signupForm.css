@@ -1,0 +1,99 @@
+* {
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: "Now Bold";
+	src: url("../../../../projects/Fonts/Now-Bold.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Now Light";
+	src: url("../../../../projects/Fonts/Now-Light.otf") format("opentype");
+}
+
+h2 {
+	font-family: "Now Bold";
+  margin: 0.5rem 0 1rem;
+  text-shadow: 0.05rem 0.15rem 0.5rem #c2c2c2;
+  padding: 1rem 0;
+  border-bottom: 0.05rem solid;
+  border-top: 0.05rem solid;
+}
+
+header  {
+	margin: 0 0.75rem;
+}
+
+input {
+	margin-bottom: 1rem;
+	float: right;
+	border-radius: 0.15rem;
+}
+
+input + label {
+	font-family: "Now Light";
+	margin-right: 1rem;
+	float: left;
+}
+
+input[type="submit"] {
+	position: absolute;
+	font-size: 1.15rem;
+	margin-bottom: 0;
+  border-radius: 0.25rem;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+input[type="submit"]:hover {
+	cursor: pointer;
+	opacity: 0.85;
+}
+
+.clearfix {
+	zoom: 1; /*IE 6/7*/
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix:after,
+.clearfix:before { 
+ content: "";  
+ display: table;
+}
+
+.sectionItem {
+	float: right;
+}
+
+.sectionTitle {
+	font-family: "Now Bold";	
+	float: left;
+}
+
+.signupForm {
+	padding: 1rem;
+	max-width: 30rem;
+	margin: auto;
+	margin-top: 8rem;
+	border: 0.15rem double black;
+	min-height: 10rem;
+}
+
+.signupForm > div {
+	padding: 0.5rem 0;
+  margin: 0 0.75rem;
+}
+
+.signupForm label {
+	float: left;
+}
+
+.submitButton {
+	position: relative;
+	height: 5rem;
+}
