@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <title>Login In Form Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="loginForm.css" rel="stylesheet" type="text/css"/>
+  </head> 
+  <body>
+		<div class="container">
+			<form class="loginForm">
+				<header>
+					<span class="screwIcon top-left"><i class="fa fa-close""></i>
+					</span>
+					<span class="screwIcon top-right"><i class="fa fa-close""></i>
+					</span>
+					<h2>Log In</h2>
+					<p>Log into your account or sign up to create one</p>
+				</header>
+				<fieldset>
+					<div class="sectionInput clearfix">
+						<input type="text" name="username" id="username" placeholder="eg. @username69" required>
+						<label for="username">Username</label>
+					</div>
+					<div class="sectionInput clearfix">
+						<input type="password" name="password" id="password" required>
+						<label for="password">Password</label>
+						<div class="description">
+							<a>Forgot Password?</a>
+						</div>
+					</div>
+					<div class="submitSection">
+						<input type="submit" class="submitLoginForm" value="Log In">
+						<a id="signUp">Sign up</a>
+					</div>
+				</fieldset>
+				<span class="screwIcon bottom-right"><i class="fa fa-close""></i>
+				</span>
+				<span class="screwIcon bottom-left"><i class="fa fa-close""></i>
+			</form>
+		</div>
+	</body>
+</html>
