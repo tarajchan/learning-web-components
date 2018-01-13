@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Traditio";
+  src: url("../../../../projects/Fonts/traditio_ah/traditio.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inconsolata Bold";
+  src: url("../../../../projects/Fonts/Inconsolata/Inconsolata-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inconsolata Regular";
+  src: url("../../../../projects/Fonts/Inconsolata/Inconsolata-Regular.ttf") format("truetype");
+}
+
+fieldset {
+  position: relative;
+  margin-bottom: 1.5rem;
+  border: 0.05rem solid black;
+  padding: 4rem 0.5rem 0.5rem;
+  box-shadow: 0.1rem 0.25rem 0.5rem #c5c5c5;
+}
+
+form {
+  position: relative;
+  top: 1rem;
+  margin: auto;
+  max-width: 40rem;
+}
+
+input[type="submit"] {
+  border: 0.05rem solid transparent;
+  font-family: "Traditio";
+  font-size: 1.15rem;
+  letter-spacing: 0.15rem;
+  background-color: black;
+  color: white;
+  padding: 0.25rem 1rem;
+  transition: 0.2s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+legend {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  line-height: 2.05rem;
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+  font-family: "Traditio";
+  padding: 0.5rem 1rem;
+  border: 0.05rem solid black;
+  position: absolute;
+  top: -0.05rem;
+  left: -1rem;
+  background: black;
+  color: white;
+}
+
+section {
+  padding: 1rem;
+  padding-top: 0.5rem;
+}
+
+section input {
+  padding: 0.5rem;
+  font-family: "Inconsolata Regular";
+  outline: none;
+}
+
+section input:focus {
+  outline-color: green;
+}
+
+section label {
+  display: inline-block;
+  margin-bottom: 0.5rem;  
+  width: 100%;
+  font-family: "Inconsolata Regular";
+}
+
+select {
+  padding: 0.475rem;
+  outline: none;
+  font-family: "Inconsolata Regular";
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+   zoom: 1;
+}
+
+.col-half {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.description {
+  line-height: 1.618rem;
+  margin: 0.5rem 0 0.5rem;
+  max-width: 97%;
+  margin-left: auto;
+  font-family: "Inconsolata Regular";
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0.5rem 0 0;
+}
+
+.row.last {
+  margin-bottom: 0.5rem;
+  justify-content: center;
+}
+
+.row.single {
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.618rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-family: "Inconsolata Bold";
+}
