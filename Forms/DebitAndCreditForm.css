@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Splendid 66 Bold";
+  src: url("../../../../projects/Fonts/splendid66/SplendidN.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Typo Quik Thin";
+  src: url("../../../../projects/Fonts/typo_quik/Typo Quik_Thin_Demo.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Typo Quik Light";
+  src: url("../../../../projects/Fonts/typo_quik/Typo Quik_Light_Demo.otf") format("opentype");
+}
+
+
+fieldset {
+  padding: 1rem;
+}
+
+form {
+  position: relative;
+  top: 10rem;
+  max-width: 40rem;
+  margin: auto;
+  padding-top: 1.25rem;
+  border: 0.05rem solid transparent;
+  border-radius: 0.25rem;
+  background: radial-gradient(farthest-corner at 80px 25px, #f3f4ff 0%, #9cafd2 25%, #5d7db7 50%, #33419e 75%, #111746 100%)
+}
+
+label {
+  font-family: "Typo Quik Light";
+  color: white;
+}
+
+legend {
+  font-family: "Splendid 66 Bold";
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 2.66rem;
+  margin-bottom: 0.25rem;
+  padding: 0 0.5rem;
+  color: #fbfbfb;
+  text-shadow: 0.05rem 0.05rem 0.75rem #111746;
+}
+
+select {
+  font-family: "Typo Quik Light";
+  cursor: pointer;
+  padding: 0.25rem 0.15rem;
+}
+
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  align-self: center;
+  background: transparent;
+  border: 0.05rem solid white;
+  border-radius: 0.15rem;
+  margin: 0;
+  margin-right: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #9cafd2;
+}
+
+input[type="submit"] {
+  padding: 0.5rem 4rem;
+  border: 0;
+  border-radius: 0.25rem;
+  background-color: black;
+  color: white;
+  font-family: "Typo Quik Light";
+  font-size: 1.25rem;
+  transition: 0.25s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #3a3a3a;
+  cursor: pointer;
+}
+
+.description {
+  color: white;
+  font-family: "Typo Quik Light";
+  margin-bottom: 1.5rem;
+  padding: 0 0.5rem;
+  text-shadow: 0.05rem 0.05rem 0.75rem #111746;
+}
+
+.col-full {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0.5rem;
+}
+
+.row {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.row.last {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col-full > label {
+  flex: 1;
+  text-shadow: 0.05rem 0.05rem 0.75rem #111746;
+}
+
+.col-full > input[type="text"] {
+  flex: 4;
+  border: 0.05rem solid white;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-family: "Typo Quik Light";
+}
+
+.col-full .row {
+  display: flex;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding-left: 7.15rem;
+  line-height: 1.618rem;
+}
+
+.right { 
+  float: right;
+  margin-left: 1.5rem;
+}
+
+#cvc {
+  max-width: 20%;
+  padding: 0.25rem 0.5rem;
+  border: 0.05rem solid white;
+  border-radius: 0.25rem;
+  font-family: "Typo Quik Light";
+}
+
+#expDate {
+  margin-right: 0.5rem;
+}
+
+#expMonth {
+  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 0.25rem; 
+}
+
+#expYear {
+  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem; 
+}
+
+#saveCard + label {
+  font-family: "Typo Quik Thin"; 
+}
