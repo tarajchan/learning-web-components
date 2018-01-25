@@ -1,0 +1,696 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "VT323";
+  src: url("../../../projects/Fonts/VT323/VT323-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Dosis Bold";
+  src: url("../../../projects/Fonts/Dosis/Dosis-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Dosis Light";
+  src: url("../../../projects/Fonts/Dosis/Dosis-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Dosis Regular";
+  src: url("../../../projects/Fonts/Dosis/Dosis-Regular.ttf") format("truetype");
+}
+
+.absolute {
+	position: absolute;
+}
+
+.actionBar {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  max-height: 3rem;
+  background: #2b2b2b;
+  opacity: 0;
+  transition: 0.25s ease-in-out;
+}
+
+.actionBar:hover .addToCartButton {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.actionBar:hover .purchaseButton {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.actionBar:hover .button-expander {
+	opacity: 0.85;
+}
+
+.actionBar-expander {
+	position: relative;
+	height: 2.5rem;
+	display: flex;
+	justify-content: center;
+}
+
+.actionBar-expander:hover + .button-group {
+	opacity: 1;
+	max-height: 3rem;
+}
+
+.actionBar-expander + .button-group:hover {
+	opacity: 1;
+	background-color: darkgreen;
+	cursor: pointer;
+}
+
+.addToCartButton {
+  transition: 0.25s ease-in-out;
+  flex: 1;
+  background: green;
+  border: 0.05rem solid #11a711;
+  border-bottom: 0.05rem solid transparent;
+  border-left: 0.05rem solid #11a711;
+  color: white;
+}
+
+.addToCartButton:hover {
+	background: #11a711;
+}
+
+.apply-promo {
+	font-family: "Dosis Bold";
+  font-size: 1.25rem;
+  margin: 1rem 0;
+  width: 55%;
+  border: 0.15rem groove #8beafb;
+  background: transparent;
+  color: #8beafb;
+  padding: 0.25rem 1rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.apply-promo:hover {
+	cursor: pointer;
+	opacity: 0.85;
+}
+
+.aside {
+  grid-area: navigation;
+  display: none;
+}
+
+.button-expander {
+	background: transparent;
+  border: 0;
+  color: white;
+  font-size: 1.25rem;
+}
+
+.button-expander:hover {
+	cursor: pointer;
+}
+
+.button-group {
+  width: 50%;
+  display: flex;
+  transform: translateX(50%);
+ 	transition: 0.25s ease-in-out;
+  opacity: 0;
+  max-height: 0; 
+}
+
+.button-group:hover {
+	max-height: 2rem;
+}
+
+.checkout {
+  background: transparent;
+  border: 0.15rem groove #8beafb;
+  border-radius: 0.25rem;
+  color: #8beafb;
+  padding: 0.75rem 2rem;
+  font-family: "Dosis Bold";
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.checkout:hover {
+	cursor: pointer;
+	opacity: 0.85;
+}
+
+.checkout-row {
+	float: right;
+	margin: 1rem 2rem;
+  text-align: right;
+}
+
+.clearfix {
+	zoom: 1; /*IE 6/7*/
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix:after,
+.clearfix:before { 
+ content: "";  
+ display: table;
+}
+
+.footer {
+  grid-area: footer;
+  position: relative;
+  background: black;
+  border-top: 0.05rem solid #6f6f6f;
+  border-left: 0.05rem solid #464646;
+}
+
+.horizontal-rule {
+  -webkit-appearance: none;
+  border-bottom: 0.15rem dashed grey;
+  margin: 1rem 0;
+}
+
+.image-action {
+	position: relative;
+	cursor: pointer;
+}
+
+.image-action:hover .actionBar {
+  cursor: pointer;
+  background: #2b2b2be0;
+  opacity: 1;
+  max-height: 6rem;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  float: left; /*fallback for IE < 11*/
+  padding: 0.25rem 1.25rem;
+  border: 0.15rem solid transparent;
+}
+
+.item:hover {
+  cursor: pointer;
+  border: 0.15rem solid white;
+}
+
+.item.active {
+  border-bottom: 0.15rem solid white;
+}
+
+.link {
+	font-family: "Dosis Light";
+	transition: 0.25s ease-in-out;
+}
+
+.link:hover {
+	border-bottom: 0.05rem solid white;
+	cursor: pointer;
+}
+.main {
+	position: relative;
+	top: 6rem;
+}
+
+.main .heading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  letter-spacing: 0.15rem;
+  line-height: 2.15rem;
+  max-height: 5rem;
+  padding: 0 1rem;
+  padding-bottom: 0.25rem;
+  margin-left: 2.5rem;
+  margin-top: 2.25rem;
+  font-family: "VT323";
+  font-size: 2rem;
+  background: black;
+  border-left: 0.35rem double #5f5f5f;
+  border-top: 0.25rem groove #171717;
+  border-bottom: 0.25rem groove #171717;
+  box-shadow: -0.35rem -0.5rem 0.05rem 0.15rem #5564ab4a, -0.35rem -0.15rem 0.05rem 0.15rem #d26c6c4a, -0.35rem 0.15rem 0.05rem 0.15rem #86c1674a, -0.35rem 0.5rem 0.15rem 0.15rem #abb5554a, inset 0.5rem 0.25rem 0.75rem 0.05rem #50505094;
+  color: white;
+  text-shadow: 0.35rem 0.25rem 0.15rem #505050;
+}
+
+.main-content {
+  margin-top: 7rem;
+}
+
+.main-navigation {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2.25rem;
+  margin-right: auto;
+  max-width: 30rem;
+}
+
+.main-navigation-item {
+  color: white;
+  font-family: "VT323";
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.navigation {
+	display: flex;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 4rem;
+  background: black;
+ }
+
+.navigation-links {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.navigation-link-group {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navigation-link-item {
+  flex: 1;
+  padding: 0.25rem 0;
+  margin-left: 1.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.start.navigation-link-group .navigation-link-item:nth-child(2) {
+  margin-left: 0;
+}
+
+.start.navigation-link-group .navigation-link-item:nth-child(3) {
+  border-bottom: 0.05rem dotted #666;
+  border-top: 0.15rem groove transparent;
+}
+
+.start.navigation-link-group .navigation-link-item:nth-child(2n+2) {
+  border-top: 0.05rem dotted #666;
+  border-bottom: 0.15rem groove transparent;
+} 
+
+.start.navigation-link-group .navigation-link-item:nth-child(3):hover {
+  border-top: 0.15rem groove #666;
+  cursor: pointer;
+}
+
+.start.navigation-link-group .navigation-link-item:nth-child(2n+2):hover {
+  border-bottom: 0.15rem groove #666;
+  cursor: pointer;
+}
+
+.navigation-link-item a {
+  color: white;
+	font-family: "Dosis Light";
+}
+
+.price {
+  font-family: "Dosis Bold";
+  font-size: 1.5rem;
+  color: #8beafb;	
+}
+
+.product {
+  position: relative;
+  min-height: 10rem;
+  box-shadow: inset 0.05rem -0.15rem 0.75rem #272727, 0.15rem 0.25rem 0.5rem #3e3e3e;
+  border-radius: 0.25rem;
+  background: #101010;
+}
+
+.product img {
+  width: 100%;
+  margin-bottom: -0.25rem;
+}
+
+.product-brand {
+  font-family: "Dosis Light";
+  font-size: 0.8rem;
+  opacity: 0.75;
+  color: #b9b9b9;
+  margin-bottom: 0.5rem;
+}
+
+.product-description {
+  position: relative;
+  height: 10rem;
+  color: white;
+  padding: 2.5rem 0.75rem 0.25rem;
+}
+
+.product-description a:hover {
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.product-description-divider {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  border-top: 0.05rem solid grey;
+  padding: 1rem 0;
+}
+
+.product-description-link {
+  color: white;
+  font-family: "Dosis Regular";
+  font-weight: 300;
+}
+
+.product-description-link:hover {
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.product-description-link {
+	font-family: "Dosis Light";
+	color: white;
+}
+
+.product-listing-container {
+  display: grid;
+  grid-template: [main-start] "main" 1fr [main-end] 
+                 [footer-start] "footer" 1fr [footer-end];
+
+}
+
+.product-listing-content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-columns: minmax(10rem, 15rem);
+  grid-auto-flow: row dense;
+  grid-column-gap: 1rem;
+  grid-row-gap: 2rem;
+  padding: 2vw;
+}
+
+.product-lisitng-main {
+	position: relative;
+	 grid-area: main;
+  background: url("https://inktart.files.wordpress.com/2012/10/static-dark-grey-design.jpg");
+}
+
+.product-title {
+  margin: 0.5rem 0;
+}
+
+.product-title a {
+  font-family: "Dosis Regular"; 
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.618rem;
+}
+
+.product-topic {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  letter-spacing: 0.15rem;
+  padding: 0.75rem 1rem;
+  font-family: "Dosis Bold";
+  font-size: 1rem;
+  background: #000000a3;
+  color: #b9b9b9;
+  box-shadow: inset 0.5rem 0.15rem 0.75rem 0.15rem #272727;
+  opacity: 0.75;
+  border-bottom: 0.05rem groove #d9d9ff;
+  border-top: 0.05rem groove #d9d9ff;
+}
+
+.promo {
+	background: transparent;
+  border: 0.05rem solid #8beafb;
+  padding: 0.5rem 0.75rem;
+  color: #8beafb;
+  font-family: "Dosis Light";
+}
+
+.promo-code {
+	float: left;
+	width: 15%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+  height: 100%;
+  margin-left: 2rem;
+}
+
+.promo-code-text {
+	color: #8beafb;
+	font-family: "Dosis Regular";
+	margin-bottom: 1rem;
+}
+
+.promo-wrapper {
+	flex: 1;
+}
+
+.purchaseButton {
+  -webkit-appearance: none;
+  flex: 3;
+  background: green;
+  border: 0.05rem solid #11a711;
+  border-bottom: 0.0rem solid transparent;
+  border-right: 0.05rem solid #11a711;
+  padding: 0.25rem 1.5rem;
+  color: white;
+  font-family: "Dosis Bold";
+  transition: 0.25s ease-in-out;
+}
+
+.purchaseButton:hover {
+   background: #2f672f;
+}
+
+.quantity {
+	position: absolute;
+  right: 0;
+  width: 2rem;
+  height: 1.75rem;
+  background: transparent;
+  border: 0.05rem groove #8beafb;
+  color: #8beafb;
+ 	font-family: "Dosis Light";
+  text-align: center;
+}
+
+.row {
+	border-top: 0.05rem groove #b3b3b3;
+	padding: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.shopping-cart {
+	position: relative;
+	height: 100%;
+}
+
+.shopping-cart-feature {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+	flex: 1;
+	text-align: right;
+}
+
+.shopping-cart-heading {
+	flex: 3;
+}
+
+.shopping-cart-items {
+	padding-top: 8rem;
+  background: #00000078;
+  height: 100%;
+}
+
+.shopping-cart-items .row > .shopping-cart-item .shopping-cart-item-description .shopping-cart-item-description-wrapper:first-child {
+	margin-left: 1.25rem;
+}
+
+.shopping-cart-item {
+	background: #00000052;
+	padding: 0 2.25rem;
+}
+
+.shopping-cart-item-content {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-bottom: 0.5rem;
+	height: 10rem;
+	margin: 0.5rem 0;
+}
+
+.shopping-cart-item-content img {
+	height: 90%;
+}
+
+.shopping-cart-item-description {
+	display: flex;
+	flex: 4;
+	height: 90%;
+	color: white;
+}
+
+.shopping-cart-item-description-row {
+	padding: 0 0 0.5rem 0.5rem;
+}
+
+.shopping-cart-item-description-row .topic {
+	font-size: 1.25rem;
+	padding-right: 0.5rem;
+}
+
+.shopping-cart-item-description-row .title {
+	font-family: "Dosis Light";
+}
+
+.shopping-cart-item-description-title .title {
+	font-family: "Dosis Regular";
+}
+
+.shopping-cart-item-description-wrapper {
+	position: relative;
+	flex: 1;
+}
+
+.shopping-cart-item-description-wrapper:first-child {
+	flex: 3;
+}
+
+.shopping-cart-item-description-wrapper:nth-child(2) {
+	display: flex;
+	justify-content: flex-end;
+  align-items: flex-start;
+ 	padding-right: 0.5rem;
+}
+
+.shopping-cart-item-title {
+	display: flex;
+	color: white;
+	padding: 0.5rem 0;
+	margin-bottom: 0.5rem;
+	border-bottom: 0.05rem groove #b3b3b3;
+}
+
+.shopping-cart-item-title .title {
+	font-family: "Dosis Regular";
+	font-size: 1.5rem;
+	line-height: 1.618rem;
+}
+
+.shopping-cart-overlay {
+	background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/wczfl6k/damaged-tv-static-background-loop_nyjw9ylzg__F0000.png");
+  background-position-y: -11.15rem;
+  background-size: 50% 150%;
+  position: absolute;
+  opacity: 0.65;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 1.5rem;
+}
+
+.site-logo {
+  flex: 1;
+  color: white;
+  font-family: "VT323";
+  font-size: 2rem;
+  line-height: 2.05rem;
+  padding-right: 2.25rem;
+}
+
+.subtotal {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	float: right;
+	margin-right: 2rem;
+}
+
+.subtotal-checkout-wrapper {
+	float: right;
+	width: 25%;
+}
+
+.subtotal-text {
+	font-size: 1.5rem;
+	line-height: 1.618rem;
+}
+
+.subtotal-text > .price {
+	margin-left: 1rem;
+}
+
+.subtotal-title {
+	color: white;
+	font-family: "Dosis Regular";
+}
+
+.top {
+	top: 0rem;
+}
+
+.topic {
+	font-family: "Dosis Light";
+	font-size: 1rem;
+}
+
+.end {
+  justify-self: flex-end;
+}
+
+.start {
+  justify-self: flex-start;
+}
+
+.sticky {
+	position: sticky;
+	z-index: 2;
+}
+
+@media screen and (min-width: 1294px) {
+	.aside {
+		display: block;
+		background: black;
+	}
+
+	.navigation-links {
+	  min-width: 80%;
+	  max-width: 85%;
+	  margin-left: 17.5%;
+	  margin-right: auto;
+	}
+
+	.product-listing-container {
+  	grid-template: [main-start] "navigation main" 1fr [main-end] 
+                 [footer-start] "navigation footer" 1fr [footer-end] /
+                 minmax(15%, 20%) minmax(80%, 85%);
+  }
+} 
