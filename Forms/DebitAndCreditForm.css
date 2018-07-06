@@ -2,6 +2,18 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 @font-face {
   font-family: "Splendid 66 Bold";
   src: url("../../../../projects/Fonts/splendid66/SplendidN.ttf") format("truetype");
@@ -24,7 +36,6 @@ fieldset {
 
 form {
   position: relative;
-  top: 10rem;
   max-width: 40rem;
   margin: auto;
   padding-top: 1.25rem;
@@ -136,7 +147,7 @@ input[type="submit"]:hover {
   line-height: 1.618rem;
 }
 
-.right { 
+.right {
   float: right;
   margin-left: 1.5rem;
 }
@@ -155,14 +166,14 @@ input[type="submit"]:hover {
 
 #expMonth {
   border-bottom-left-radius: 0.25rem;
-  border-top-left-radius: 0.25rem; 
+  border-top-left-radius: 0.25rem;
 }
 
 #expYear {
   border-bottom-right-radius: 0.25rem;
-  border-top-right-radius: 0.25rem; 
+  border-top-right-radius: 0.25rem;
 }
 
 #saveCard + label {
-  font-family: "Typo Quik Thin"; 
+  font-family: "Typo Quik Thin";
 }
